@@ -1,0 +1,10 @@
+{
+  "status": "account creation",
+  "data": {
+    "name": "adjasent",
+    "salary": "7996567",
+    "age": "36",
+    "id": 671
+  },
+  "message": "Successfully! Record has been added."
+}
