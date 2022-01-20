@@ -1,9 +1,8 @@
-package org.mycompany.utils;
+package utils;
 
 import net.minidev.json.JSONObject;
 import net.minidev.json.parser.JSONParser;
 import net.minidev.json.parser.ParseException;
-import org.apache.commons.io.FileUtils;
 
 import java.io.*;
 import java.net.URL;

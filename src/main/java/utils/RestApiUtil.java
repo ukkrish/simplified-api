@@ -1,21 +1,14 @@
-package org.mycompany.utils;
+package utils;
 
-import com.jayway.jsonpath.JsonPath;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import net.minidev.json.JSONArray;
-import net.minidev.json.JSONObject;
-import net.minidev.json.parser.JSONParser;
 import net.minidev.json.parser.ParseException;
 import org.junit.Assert;
 
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
-import java.net.URL;
-import java.net.URLDecoder;
+
 
 public class RestApiUtil {
 
@@ -64,10 +57,6 @@ public class RestApiUtil {
         return response;
 
     }
-
-
-
-
 
 
     public void verifyResponseCode(int respCode) {

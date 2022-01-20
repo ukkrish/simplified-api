@@ -1,16 +1,17 @@
-package steps;
+package org.mycompany.steps;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.minidev.json.parser.ParseException;
-import org.mycompany.utils.RestApiUtil;
+import utils.RestApiUtil;
 
 import java.io.IOException;
 
 public class MainApiStepDefs {
 
     RestApiUtil restApiUtil = new RestApiUtil();
+
 
     @Given("user executes {string} request api {string} with params {string} headers {string} and payload {string}")
     public void userExecutesRequestApiWithParamsHeadersAndPayload(String httpReqType, String endpoint, String paramsList, String headers, String payload) throws IOException, ParseException {
