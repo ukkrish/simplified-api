@@ -1,9 +1,12 @@
 version: 2
 jobs:
-    build:
-      macos:
-        xcode: "12.5.1"
+  build: # name of your job
+    macos: # executor type
+      xcode: 11.6
+
     steps:
+      # Commands run in a macOS virtual machine environment
+      # with Xcode 11.3 installed
       - checkout
       - run:
           command: mvn test
