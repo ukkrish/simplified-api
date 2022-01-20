@@ -1,4 +1,4 @@
-package org.mycompany.steps;
+package steps;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;

@@ -16,6 +16,6 @@ Feature: Check universities list across the countries
 #    Then Verifies that "<message>" is present in the response
     Examples:
       | http | endpint        | paramsList | headersList | payloadName      | ResponseCODE |
-#      | POST | /api/v1/create |            |             | API_POST_PAYLOAD | 200          |
-      | GET  | /api/v1/create |            |             | API_POST_PAYLOAD | 404          |
+     | POST | /api/v1/create |            |             | API_POST_PAYLOAD | 200          |
+#      | GET  | /api/v1/create |            |             | API_POST_PAYLOAD | 404          |
 
