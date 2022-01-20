@@ -1,7 +1,13 @@
+
 version: 2
 jobs:
   build:
+    macos:
+        - image: circleci/TestCucumberRunner.java
     steps:
       - checkout
       - run:
           command: mvn test
+
+
+
