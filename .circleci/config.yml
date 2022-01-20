@@ -2,7 +2,7 @@ version: 2
 jobs:
   build: # name of your job
     macos: # executor type
-      xcode: 11.6
+      xcode: 11.3
 
     steps:
       # Commands run in a macOS virtual machine environment
