@@ -1,12 +1,10 @@
-version: 2
-jobs:
-    build:
-      macos:
-        xcode: "12.5.1"
-    steps:
-      - checkout
-      - run:
-          command: mvn test
+version: 2.1
 
+orbs:
+  maven: circleci/maven@1.3.0
 
-
+workflows:
+  maven_test:
+    jobs:
+      - maven/test:
+          command: 'mvn test'
