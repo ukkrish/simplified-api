@@ -1,15 +1,10 @@
-version: 2
-jobs:
-  build: # name of your job
-    macos: # executor type
-      xcode: 11.3
+version: 2.1
 
-    steps:
-      # Commands run in a macOS virtual machine environment
-      # with Xcode 11.3 installed
-      - checkout
-      - run:
-          command: mvn test
+orbs:
+  maven: circleci/maven@1.3.0
 
-
-
+workflows:
+  maven_test:
+    jobs:
+      - maven/test:
+          command: 'mvn test'
