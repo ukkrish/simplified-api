@@ -17,5 +17,5 @@ Feature: Check universities list across the countries
     Examples:
       | http | endpint        | paramsList | headersList | payloadName      | ResponseCODE |
      | POST | /api/v1/create |            |             | API_POST_PAYLOAD | 200          |
-      | GET  | /api/v1/create |            |             | API_POST_PAYLOAD | 404          |
+#      | GET  | /api/v1/create |            |             | API_POST_PAYLOAD | 404          |
 
