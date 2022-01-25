@@ -22,6 +22,8 @@ public class MainApiStepDefs {
     public void response_code_is(String ResponseCODE) {
         int respCode = Integer.parseInt(ResponseCODE);
         restApiUtil.verifyResponseCode(respCode);
+        System.out.println("resp code mathed .....!!!");
+
     }
 
     @Then("Verifies that {string} is present in the response")
