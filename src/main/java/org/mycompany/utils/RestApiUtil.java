@@ -1,4 +1,4 @@
-package utils;
+package org.mycompany.utils;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -6,11 +6,16 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import net.minidev.json.parser.ParseException;
 import org.junit.Assert;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 
-
+@Component
 public class RestApiUtil {
+
+@Autowired
+ScenarioContext scenarioContext;
 
     Response response = null;
     CommonUtils commonUtils = new CommonUtils();
@@ -51,10 +56,15 @@ public class RestApiUtil {
             response = requestSpecification.get(endPoint);
 //            context.setContext("GET_RESPONSE", response);
         }
+        scenarioContext.setStatusCode(response.getStatusCode());
+        scenarioContext.setContext("API_RESPONSE",response.body().asString());
 
         System.out.println("*******  API statusCode = " + response.getStatusCode());
 
+        System.out.println("READING From scenario context: "+scenarioContext.getStatusCode());
+
         return response;
+
 
     }
 
@@ -62,6 +72,7 @@ public class RestApiUtil {
     public void verifyResponseCode(int respCode) {
         Assert.assertEquals(respCode, response.getStatusCode());
         System.out.println("Successfull 200 Code has received");
+
     }
 
 }

@@ -1,8 +1,9 @@
-package utils;
+package org.mycompany.utils;
 
 import net.minidev.json.JSONObject;
 import net.minidev.json.parser.JSONParser;
 import net.minidev.json.parser.ParseException;
+import org.springframework.stereotype.Component;
 
 import java.io.*;
 import java.net.URL;
@@ -10,6 +11,7 @@ import java.net.URLDecoder;
 import java.util.HashMap;
 import java.util.Properties;
 
+@Component
 public class CommonUtils {
 
     public String getProperty(String key) {
